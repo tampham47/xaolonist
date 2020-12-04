@@ -2,9 +2,10 @@
 templateKey: blog-post
 title: Making sense of the SCAA’s new Flavor Wheel
 date: 2016-12-17T15:04:10.000Z
+description: The Coffee Taster’s Flavor Wheel, the official resource used by
+  coffee tasters, has been revised for the first time this year.
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 tags:
   - flavor
   - tasting
@@ -31,3 +32,56 @@ For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffe
 Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
 
 The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+
+```
+const notifyViaOnesignal = require('@gosunny/shared/utils/notifyViaOnesignal');
+const apiResult = require('@gosunny/shared/utils/apiResult');
+const STAGE = process.env.STAGE;
+
+module.exports.sendNewReadingToAmbassador = async (event) => {
+  const body = JSON.parse(event.body);
+  console.log('sendNewReadingToAmbassador', body);
+
+  const notifyToAll = () => {
+    // it's not good when we can trigger notification for all from dev
+    if (STAGE === 'dev') {
+      return Promise.resolve();
+    }
+
+    let title = 'Your Daily Read is ready';
+    let content = `Lv${body.level || 0}, ${body.title}`;
+    let data = {
+      unitId: body._id,
+      topic: 'reading',
+    };
+
+    // if tags has vocab
+    if (body.unit && body.unit.tags && body.unit.tags.includes('vocab')) {
+      title = 'GoVoca - Từ vựng mỗi ngày';
+      content = body.title;
+      data = {
+        type: 'daily-vocab',
+      };
+    }
+
+    console.log('notifyViaOnesignal', title, content, data);
+    return notifyViaOnesignal({
+      headings: {
+        en: title,
+      },
+      contents: {
+        en: content,
+      },
+      data,
+      included_segments: ['All'],
+    });
+  };
+
+  return Promise.all([notifyToAll()])
+    .then((data) => apiResult(200, data))
+    .catch((err) => apiResult(500, { err, input: event }));
+};
+
+```
+
+Nếu biết tình như thế, chẳng lớn lên làm gì
