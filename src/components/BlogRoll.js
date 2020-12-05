@@ -15,7 +15,19 @@ class BlogRoll extends React.Component {
             <div className="article article__item" key={post.id}>
               <article>
                 <header className="article__wrp">
-                <div className="article__img">
+                  <div className="article__content">
+                    <div className="article__title">
+                      <Link to={post.fields.slug}>
+                        {post.frontmatter.title}
+                      </Link>
+                    </div>
+                    <div>
+                      <span className="article__date">
+                        {post.frontmatter.date}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="article__img">
                     {post.frontmatter.featuredimage ? (
                       <div>
                         <PreviewCompatibleImage
@@ -27,17 +39,6 @@ class BlogRoll extends React.Component {
                       </div>
                     ) : null}
                   </div>
-                  <div className="article__content">
-                    <div className="article__title">
-                      <Link to={post.fields.slug}>
-                        {post.frontmatter.title}
-                      </Link>
-                    </div>
-                    <div>
-                      <span className="article__date">{post.frontmatter.date}</span>
-                    </div>
-                  </div>
-
                 </header>
               </article>
             </div>
