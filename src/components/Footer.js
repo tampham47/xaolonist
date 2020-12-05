@@ -3,8 +3,17 @@ import React from 'react';
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="container">Xaolonist.com</div>
+      <footer className="container">
+        <span role="img" aria-label="cat - github">
+          😽{' '}
+        </span>
+        <a
+          href="https://github.com/tampham47"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          xaolonist
+        </a>
       </footer>
     );
   }
