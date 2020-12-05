@@ -4,7 +4,7 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        Xaolonist.com
+        <div className="container">Xaolonist.com</div>
       </footer>
     );
   }
