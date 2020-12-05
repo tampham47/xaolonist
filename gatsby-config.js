@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'D. Xaolonist',
+    title: 'd. xaolonist',
     description:
       'Who is a scientist, an anthropologist, a psychologist, a moralist... I am also doing Web UI on my left hand.',
   },
