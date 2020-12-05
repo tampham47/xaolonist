@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = class extends React.Component {
   render() {
@@ -6,8 +6,8 @@ const Footer = class extends React.Component {
       <footer className="footer has-background-black has-text-white-ter">
         Xaolonist.com
       </footer>
-    )
+    );
   }
-}
+};
 
-export default Footer
+export default Footer;
