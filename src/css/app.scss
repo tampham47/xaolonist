@@ -56,25 +56,35 @@ footer {
   transition: all 0.25s;
   opacity: 0.9;
 
-  &.light {
-    opacity: 0.25;
-  }
-
   &:hover {
     opacity: 1;
   }
-}
-.xln a {
-  color: white;
-  background: $bg;
-  mix-blend-mode: multiply;
-  user-select: none;
-  display: block;
 
-  &:hover {
-    text-decoration: none;
+  a {
+    color: white;
+    background: $bg;
+    mix-blend-mode: multiply;
+    user-select: none;
+    display: block;
+  
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.light {
+    .xln_name {
+      opacity: 0.25;
+      transition: all 0.25s;
+    }
+    &:hover {
+      .xln_name {
+        opacity: 1;
+      }
+    }
   }
 }
+
 
 .article {
   &__item {

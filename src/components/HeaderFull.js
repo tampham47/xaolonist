@@ -6,7 +6,9 @@ const Navbar = class extends React.Component {
     return (
       <section className="container intro">
         <h1 className="xln">
-          <Link to="/">d. xaolonist</Link>
+          <Link to="/">
+            <span>d.</span> <span className="xln_name">xaolonist</span>
+          </Link>
         </h1>
         <h4>
           Who is a scientist, an anthropologist, a psychologist, a moralist... I
