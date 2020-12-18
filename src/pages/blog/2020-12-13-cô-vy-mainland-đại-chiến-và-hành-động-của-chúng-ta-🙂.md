@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Cô vy, mainland đại chiến và hành động của chúng ta!!! 🙂
-date: 2020-08-20T04:13:39.617Z
+date: 2020-04-20T04:13:39.617Z
 description: Bài viết chỉ dựa trên 10% sự thật, còn lại là Bia. Cộng thêm cái
   mood hype khi vừa xem xong phần 2 của Money Heist. Nên cân nhắc khi đọc!
 featuredpost: true
