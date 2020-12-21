@@ -39,7 +39,7 @@ footer {
   .built-desc {
     display: inline-block;
     margin-left: 6px;
-    opacity: 0.6;;
+    opacity: 0.6;
   }
 }
 
@@ -50,8 +50,18 @@ footer {
   }
 }
 
+.xln-info {
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .xln {
-  background: url("/img/galaxy.jpg");
+  background: url('/img/galaxy.jpg');
   font-size: 36px;
   transition: all 0.25s;
   opacity: 0.9;
@@ -66,7 +76,7 @@ footer {
     mix-blend-mode: multiply;
     user-select: none;
     display: block;
-  
+
     &:hover {
       text-decoration: none;
     }
@@ -85,12 +95,11 @@ footer {
   }
 }
 
-
 .article {
   &__item {
     margin-bottom: 1em;
     animation-name: fadeInLeft;
-    animation-duration: .75s;
+    animation-duration: 0.75s;
     position: relative;
   }
   &__item::after {
@@ -186,7 +195,7 @@ footer {
   &__content {
     flex: 1;
   }
-  
+
   &__title {
     margin-bottom: 2px;
   }

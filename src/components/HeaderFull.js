@@ -14,7 +14,7 @@ const Navbar = class extends React.Component {
           Who is a scientist, an anthropologist, a psychologist, a moralist... I
           am also doing Web UI on my left&nbsp;hand.
         </h4>
-        <ul>
+        <ul className="xln-info">
           <li className="info">
             <span role="img" aria-label="pineapple">
               🍍{' '}
@@ -28,19 +28,19 @@ const Navbar = class extends React.Component {
             </a>
             <span>, </span>
             <a
-              href="https://medium.com/@xaolonist"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              medium
-            </a>
-            <span>, </span>
-            <a
               href="https://github.com/tampham47"
               target="_blank"
               rel="noopener noreferrer"
             >
               github
+            </a>
+            <span>, </span>
+            <a
+              href="https://medium.com/@xaolonist"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              medium
             </a>
             <span>, </span>
             <a
@@ -62,7 +62,7 @@ const Navbar = class extends React.Component {
             <span role="img" aria-label="phone">
               🤙🏿{' '}
             </span>
-            <a href="tel:01643652922">0343-652-922</a>
+            <a href="tel:+84343652922">+84 343-652-922</a>
           </li>
         </ul>
       </section>
