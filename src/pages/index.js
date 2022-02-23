@@ -11,7 +11,7 @@ export default class BlogIndexPage extends React.Component {
         <HeaderFull />
         <section>
           <div className="container">
-            <h2>My thoughts</h2>
+            <h2>Suy nghĩ của ảnh</h2>
             <BlogRoll />
           </div>
         </section>

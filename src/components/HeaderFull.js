@@ -11,8 +11,8 @@ const Navbar = class extends React.Component {
           </Link>
         </h1>
         <h4>
-          Who is a scientist, an anthropologist, a psychologist, a moralist... I
-          am also doing Web UI on my left&nbsp;hand.
+          he is a scientist, an anthropologist, a psychologist. he is doing
+          software & web on his left hand.
         </h4>
         <ul className="xln-info">
           <li className="info">
